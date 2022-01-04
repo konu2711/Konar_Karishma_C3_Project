@@ -68,5 +68,13 @@ class RestaurantTest {
     }
     //<<<<<<<<<<<<<<<<<<<<<<<MENU>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 
+    @Test
+    public void total_order_cost_should_be_388_when_SweetCornSoup_and_Vegetable_lasagne_are_ordered() throws itemNotFoundException {
+        List<String> selectedItems = Arrays.asList("Sweet corn soup","Vegetable lasagne");
+        int totalCost = restaurant.getOrderValue(selectedItems);
+        assertThat(totalCost, equalTo(388));
+
+    }
+
 
 }
